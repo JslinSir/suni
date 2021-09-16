@@ -87,10 +87,22 @@
     * suni-ui 更版本成功
     * gitee pages 部署成功
     * github page 部署成功
+      * 分支切换至main
   * [ ] 开发打包自动化命令
     * 开发自动化
       * 自动 suni-ui watch 模式
       * 自动 suni-website dev 模式
+      * 可是异步命令无法显示
+      * 输出继承
+        * 异步视乎无法打印
+        * 那把vite同步
+        * 都有反应
+        * ok
+    * 打包自动化
+      * 同步打包
+      * 文字提示
+      * 文字颜色 *npm i chalk -D*
+    * 安装自动化
 * 优化文档网页
 
   * 首页动态

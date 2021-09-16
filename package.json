@@ -1,0 +1,10 @@
+{
+	"scripts": {
+		"install": "node ./bin/install.js",
+		"dev": "node ./bin/dev.js",
+		"build": "node ./bin/build.js"
+	},
+	"devDependencies": {
+		"chalk": "^4.1.2"
+	}
+}
