@@ -73,10 +73,19 @@
     * 移除 .husky 文件夹
     * 移除 lint、prepare 命令
     * 移除 package.json lint-staged 配置
-  * [ ] 去除git，放置一个文件夹，新生成git
+  * [x] 去除git，放置一个文件夹，新生成git
     * 上传
     * 安装node_modules
     * website 打包 设置base
+  * [x] 开发模式
+    * suni-ui watch
+    * suni-website 引入本地
+      * vite配置环境
+      *  函数配置`defineConfig(fn({mode}))`
+      * ok
+  * [ ] 打包部署
+    * suni-ui 更版本成功
+    * 
 * 优化文档网页
   * [ ] 首页动态
     * [ ] 标题的提示偏移

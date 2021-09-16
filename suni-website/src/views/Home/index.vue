@@ -1,7 +1,7 @@
 <template>
 	<div class="home">
 		<h1>
-			<si-tooltip content="看什么看!" variant="border">
+			<si-tooltip content="看什么看!" variant="border" :offset-x="35">
 				<span>SUNI</span>
 			</si-tooltip>
 		</h1>

@@ -1,10 +1,10 @@
-export const getTooltipPosition = (content: HTMLElement, position: string) => {
+export const getTooltipPosition = (content: HTMLElement, position: string, offsetX: number, offsetY: number) => {
 	const { x, y, width, height } = content.getBoundingClientRect()
 	const style: any = {}
 
 	if (position === 'top') {
-		style.bottom = `${window.innerHeight - y + 8}px`
-		style.left = `${x + width / 2}px`
+		style.bottom = `${window.innerHeight - y + 8 - offsetY}px`
+		style.left = `${x + width / 2 + offsetX}px`
 	} else if (position == 'bottom') {
 		style.top = `${y + height + 8}px`
 		style.left = `${x + width / 2}px`

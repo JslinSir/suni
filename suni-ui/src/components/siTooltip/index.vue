@@ -53,7 +53,10 @@ export default defineComponent({
 		circle: { type: Boolean },
 		square: { type: Boolean },
 
-		loading: { type: Boolean }
+		loading: { type: Boolean },
+
+		offsetX: { type: Number, default: 0 },
+		offsetY: { type: Number, default: 0 }
 	},
 	data() {
 		return {
@@ -70,7 +73,12 @@ export default defineComponent({
 
 	methods: {
 		getPosition() {
-			this.positionStyle = getTooltipPosition(this.$refs.content as HTMLElement, this.position)
+			this.positionStyle = getTooltipPosition(
+				this.$refs.content as HTMLElement,
+				this.position,
+				this.offsetX,
+				this.offsetY
+			)
 		},
 		activeHandle() {
 			this.getPosition()
