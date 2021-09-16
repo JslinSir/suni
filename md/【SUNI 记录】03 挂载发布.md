@@ -74,7 +74,9 @@
     * 移除 lint、prepare 命令
     * 移除 package.json lint-staged 配置
   * [ ] 去除git，放置一个文件夹，新生成git
-    * 
+    * 上传
+    * 安装node_modules
+    * website 打包 设置base
 * 优化文档网页
   * [ ] 首页动态
     * [ ] 标题的提示偏移

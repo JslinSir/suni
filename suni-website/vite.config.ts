@@ -4,9 +4,9 @@ import vue from '@vitejs/plugin-vue'
 import vitePluginVuedoc, { vueDocFiles } from 'vite-plugin-vuedoc'
 
 export default defineConfig({
-	base: '/vue3-website/',
+	base: '/suni/',
 	build: {
-		outDir: 'docs'
+		outDir: '../docs'
 	},
 
 	plugins: [
