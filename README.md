@@ -29,3 +29,13 @@ const app = createApp(App)
 
 app.use(Suni)
 ```
+
+
+
+## Dev
+
+```shell
+npm install
+npm run install
+npm run dev
+```

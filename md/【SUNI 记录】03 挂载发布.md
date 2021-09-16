@@ -88,7 +88,7 @@
     * gitee pages 部署成功
     * github page 部署成功
       * 分支切换至main
-  * [ ] 开发打包自动化命令
+  * [x] 开发打包自动化命令
     * 开发自动化
       * 自动 suni-ui watch 模式
       * 自动 suni-website dev 模式
@@ -103,6 +103,7 @@
       * 文字提示
       * 文字颜色 *npm i chalk -D*
     * 安装自动化
+  * 更新readme
 * 优化文档网页
 
   * 首页动态
