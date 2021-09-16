@@ -1,0 +1,16 @@
+.si-avatar {
+	&.circle {
+		border-radius: 50%;
+
+		.si-avatar__badge {
+			--badge-w: -2px;
+		}
+	}
+	&.square {
+		border-radius: 0;
+
+		.si-avatar__badge__point {
+			border-radius: 0;
+		}
+	}
+}

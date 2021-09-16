@@ -1,0 +1,42 @@
+@import 'base';
+@import 'variant';
+@import 'slot';
+@import 'loading';
+
+.si-input {
+	&.state {
+		.si-input__content {
+			color: hsl(var(--si-color));
+			background: hsla(var(--si-color), 0.1);
+			&:focus {
+				border-bottom: 2px solid transparent;
+			}
+			&::placeholder {
+				color: hsla(var(--si-color), var(--si-placeholder-opacity));
+			}
+		}
+	}
+
+	&.flexible {
+		.si-input__label {
+			cursor: text;
+			position: absolute;
+			top: 9px;
+			left: 12px;
+			color: hsla(var(--si-text), var(--si-placeholder-opacity));
+			transition: all 0.25s ease;
+		}
+		.si-input__content:focus ~ .si-input__label,
+		.si-input__content.value ~ .si-input__label {
+			color: hsla(var(--si-text), 0.7);
+			top: -17px;
+			left: 9px;
+			font-size: 0.9em;
+		}
+	}
+
+	&.disabled {
+		pointer-events: none;
+		opacity: 0.6;
+	}
+}

@@ -1,0 +1,48 @@
+.component-container {
+	padding: 0 40px 2.5em;
+	width: 800px;
+
+	& > h1 {
+		font-size: 28px;
+		font-weight: bold;
+		padding: 2em 0;
+		margin: 0;
+		a {
+			display: none;
+		}
+	}
+
+	& > h2 {
+		padding: 80px 0 20px;
+		font-size: 24px;
+		transition: padding-left 0.3s;
+		position: relative;
+		a {
+			opacity: 0;
+			font-weight: normal;
+			transition: opacity 0.3s;
+			color: inherit;
+		}
+		&:hover {
+			padding-left: 12px;
+			a {
+				opacity: 1;
+			}
+		}
+	}
+
+	& > p {
+		padding: 8px 24px;
+		font-size: 14px;
+
+		& > code {
+			color: hsl(var(--si-primary));
+			padding: 0.25em 0.5em;
+			margin: 0 0.25em;
+			font-size: 12px;
+			background-color: hsla(0, 0%, 0%, 0.05);
+			border-radius: 3px;
+			font-family: Fira Mono, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+		}
+	}
+}

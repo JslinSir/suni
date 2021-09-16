@@ -1,0 +1,36 @@
+.si-loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: var(--si-zindex-loading);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: hsla(var(--si-background), var(--si-opacity));
+	transition: all 0.25s ease;
+	padding: 20px;
+	border-radius: inherit;
+
+	&__load {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		&__animation {
+			width: 40px;
+			height: 40px;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		&__text {
+			font-size: 0.75em;
+			margin: 7px;
+			font-weight: bold;
+			color: hsl(var(--si-color));
+		}
+	}
+}

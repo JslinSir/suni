@@ -1,0 +1,27 @@
+[class*='si-'] {
+	box-sizing: border-box;
+	outline: none;
+	list-style: none;
+
+	&[disabled] {
+		opacity: 0.6;
+		pointer-events: none;
+	}
+
+	button {
+		cursor: pointer;
+		outline: none;
+	}
+
+	input {
+		outline: none;
+	}
+
+	input,
+	textarea,
+	button,
+	select,
+	a {
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	}
+}

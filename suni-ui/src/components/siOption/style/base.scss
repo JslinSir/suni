@@ -1,0 +1,29 @@
+.si-option {
+	margin: 2px 0;
+	padding: 6px 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.25s ease;
+	text-align: left;
+	overflow: hidden;
+	&:hover {
+		padding-left: 14px;
+		color: hsl(var(--si-color));
+	}
+	&.select {
+		background: hsl(var(--si-gray-2));
+	}
+	&.selected {
+		color: hsl(var(--si-color));
+		background: hsla(var(--si-color), 0.05);
+	}
+	&.hidden {
+		opacity: 0;
+		visibility: hidden;
+		max-height: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+		border: 0;
+		margin: 0;
+	}
+}

@@ -1,0 +1,53 @@
+.si-dialog {
+	&.loading {
+		.si-dialog__loading {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: inherit;
+			background: hsla(var(--si-background), 0.8);
+			&:after {
+				position: absolute;
+				display: block;
+				box-sizing: border-box;
+				width: 30px;
+				height: 30px;
+				border: 2px solid transparent;
+				border-bottom: 2px solid hsl(var(--si-color));
+				border-radius: 50%;
+				box-shadow: 0 0 0 0 hsl(var(--si-color));
+				content: '';
+				transition: all 0.25s ease;
+				animation: loadingDialog 0.6s ease infinite;
+			}
+			&:before {
+				position: absolute;
+				display: block;
+				box-sizing: border-box;
+				width: 30px;
+				height: 30px;
+				border: 2px dashed transparent;
+				border-bottom: 2px solid hsl(var(--si-color));
+				border-radius: 50%;
+				box-shadow: 0 0 0 0 hsl(var(--si-color));
+				content: '';
+				transition: all 0.25s ease;
+				animation: loadingDialog 0.6s linear infinite;
+			}
+		}
+	}
+}
+
+@keyframes loadingDialog {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

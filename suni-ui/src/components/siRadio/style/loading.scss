@@ -1,0 +1,59 @@
+.si-radio {
+	&.loading {
+		user-select: none;
+		pointer-events: none;
+		.si-radio__effect {
+			&:after {
+				opacity: 0.1;
+			}
+			&__loading {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				border-radius: inherit;
+
+				&:before {
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					display: block;
+					box-sizing: border-box;
+					border: 2px dashed transparent;
+					border-right: 2px dashed hsla(var(--si-text), 0.4);
+					border-radius: inherit;
+					content: '';
+					transition: all 0.25s ease;
+					animation: loadingRadio 0.6s linear infinite;
+				}
+				&:after {
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					display: block;
+					box-sizing: border-box;
+					border: 2px solid transparent;
+					border-right: 2px solid hsla(var(--si-text), 0.4);
+					border-radius: inherit;
+					content: '';
+					transition: all 0.25s ease;
+					animation: loadingRadio 0.6s ease infinite;
+				}
+			}
+		}
+
+		@keyframes loadingRadio {
+			0% {
+				transform: rotate(0);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	}
+}

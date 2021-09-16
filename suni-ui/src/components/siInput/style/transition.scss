@@ -1,0 +1,17 @@
+.si-input__message-enter-from,
+.si-input__message-leave-to {
+	height: 0;
+}
+.si-input__message-enter-to,
+.si-input__message-leave-from {
+	height: 1.25em;
+}
+
+.si-input__progress-enter-from,
+.si-input__progress-leave-to {
+	width: 0;
+}
+.si-input__progress-enter-to,
+.si-input__progress-leave-from {
+	width: 95%;
+}

@@ -1,0 +1,26 @@
+.si-select {
+	&.state {
+		.si-select__input {
+			background: hsla(var(--si-color), 0.05);
+			color: hsl(var(--si-color));
+
+			&::placeholder {
+				color: hsla(var(--si-color), var(--si-placeholder-opacity));
+			}
+		}
+		.si-select__suffix {
+			.arrow-icon {
+				color: hsl(var(--si-color));
+			}
+		}
+		&.active {
+			.si-select__input {
+				background: hsl(var(--si-background));
+
+				&::placeholder {
+					color: hsla(var(--si-text), var(--si-placeholder-opacity));
+				}
+			}
+		}
+	}
+}

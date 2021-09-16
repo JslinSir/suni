@@ -1,0 +1,13 @@
+.si-card {
+	&.type-1 {
+		&:hover {
+			box-shadow: 0 0 0 0 hsla(0, 0%, 0%, var(--si-shadow-opacity));
+			transform: translate(0, 5px);
+			.si-card__img {
+				img {
+					transform: scale(1.15);
+				}
+			}
+		}
+	}
+}

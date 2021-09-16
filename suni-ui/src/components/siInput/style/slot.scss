@@ -1,0 +1,57 @@
+.si-input {
+	&.prefix {
+		.si-input__prefix {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			left: 0;
+			top: 0;
+			width: 36px;
+			height: 36px;
+			border-radius: inherit;
+			background: hsl(var(--si-gray-2));
+			box-shadow: 12px 0 10px -10px hsla(0, 0%, 0%, var(--si-shadow-opacity));
+			transition: all 0.25s ease;
+			pointer-events: none;
+		}
+		.si-input__content {
+			padding-left: 38px;
+			&:focus {
+				padding-left: 42px;
+			}
+		}
+		.si-input__content:focus ~ .si-input__prefix {
+			top: -6px;
+			left: -6px;
+			box-shadow: 15px 10px 10px -10px hsla(0, 0%, 0%, var(--si-shadow-opacity));
+			background: hsl(var(--si-gray-1));
+		}
+	}
+	&.suffix {
+		.si-input__suffix {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			right: 0;
+			top: 0;
+			width: 36px;
+			height: 36px;
+			border-radius: inherit;
+			background: hsl(var(--si-gray-2));
+			box-shadow: -12px 0 10px -10px hsla(0, 0%, 0%, var(--si-shadow-opacity));
+			transition: all 0.25s ease;
+			pointer-events: none;
+		}
+		.si-input__content {
+			padding-right: 38px;
+		}
+		.si-input__content:focus ~ .si-input__suffix {
+			top: -6px;
+			right: -6px;
+			box-shadow: 15px 10px 10px -10px hsla(0, 0%, 0%, var(--si-shadow-opacity));
+			background: hsl(var(--si-gray-1));
+		}
+	}
+}

@@ -1,0 +1,59 @@
+.si-input--border {
+	border-radius: 0px;
+	.si-input__content {
+		background: transparent;
+
+		&:focus {
+			background: transparent;
+			border-color: transparent;
+		}
+	}
+	.si-input__effect {
+		position: absolute;
+		height: 2px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: hsl(var(--si-gray-3));
+		&::before {
+			content: '';
+			transition: all 0.25s ease;
+			position: absolute;
+			left: 50%;
+			right: 50%;
+			bottom: 0;
+			top: 0;
+			background: hsl(var(--si-color));
+		}
+	}
+	.si-input__content:focus ~ .si-input__effect {
+		&::before {
+			left: 0;
+			right: 0;
+		}
+	}
+}
+
+.si-input--shadow {
+	.si-input__content {
+		background: transparent;
+		position: relative;
+		z-index: 1;
+		&:focus {
+			background: transparent;
+		}
+	}
+	.si-input__effect {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		border-radius: inherit;
+		box-shadow: 0px 6px 25px -6px hsla(0, 0%, 0%, var(--si-shadow-opacity));
+		transition: all 0.25s ease;
+	}
+	.si-input__content:focus ~ .si-input__effect {
+		box-shadow: 0px 0px 3px 0px hsla(0, 0%, 0%, var(--si-shadow-opacity));
+	}
+}

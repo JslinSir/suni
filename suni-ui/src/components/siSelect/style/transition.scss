@@ -1,0 +1,21 @@
+.si-options-enter-from {
+	opacity: 0;
+	box-shadow: 0 0 0 0 hsla(0, 0%, 0%, var(--si-shadow-opacity));
+	transform: translate(0, 10px);
+	&.top {
+		transform: translate(0, -10px);
+	}
+}
+.si-options-enter-active,
+.si-options-leave-active {
+	transition: all 0.25s ease;
+}
+.si-options-leave-to {
+	opacity: 0;
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, var(--si-shadow-opacity));
+	transition: all 0.25s ease;
+	transform: translate(0, 10px);
+	&.top {
+		transform: translate(0, -10px);
+	}
+}

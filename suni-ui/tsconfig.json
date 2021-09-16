@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"sourceMap": true,
+		"declaration": true,
+		"strict": true,
+		"outDir": "./dist",
+		"baseUrl": ".",
+		"rootDir": ".",
+		"target": "es6",
+		"module": "es6",
+		"moduleResolution": "node",
+		"removeComments": true,
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"lib": ["esnext", "dom"]
+	},
+	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "shims-vue.d.ts"]
+}

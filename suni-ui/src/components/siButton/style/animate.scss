@@ -1,0 +1,81 @@
+.si-button--animate {
+	.si-button__content {
+		transition: transform 0.25s ease;
+		i {
+			font-size: 1.15rem;
+		}
+	}
+
+	.si-button__animate {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: transform 0.25s ease;
+		transform: translate(100%);
+		pointer-events: none;
+		&--vertical {
+			transform: translate(0, 100%);
+		}
+		&--scale {
+			opacity: 0;
+			transform: scale(0.5);
+		}
+		&--rotate {
+			opacity: 0;
+			transform: rotate(-180deg);
+		}
+	}
+
+	&:hover {
+		.si-button__content {
+			transform: translate(-100%);
+		}
+		.si-button__animate {
+			transform: translate(0%);
+		}
+	}
+
+	&.si-button--animate-vertical {
+		&:hover {
+			.si-button__content {
+				opacity: 0;
+				transform: translate(0, -100%) !important;
+			}
+			.si-button__animate {
+				transform: translate(0%) !important;
+			}
+		}
+	}
+
+	&.si-button--animate-scale {
+		&:hover {
+			.si-button__content {
+				opacity: 0;
+				transform: scale(1.4) !important;
+			}
+			.si-button__animate {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+	}
+
+	&.si-button--animate-rotate {
+		&:hover {
+			.si-button__content {
+				opacity: 0;
+				transform: rotate(180deg) !important;
+			}
+
+			.si-button__animate {
+				opacity: 1;
+				transform: rotate(0);
+			}
+		}
+	}
+}

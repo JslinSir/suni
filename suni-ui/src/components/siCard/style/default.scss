@@ -1,0 +1,57 @@
+.si-card {
+	position: relative;
+	max-width: 350px;
+	color: hsl(var(--si-text));
+	border-radius: 20px;
+	background: hsl(var(--si-background));
+	box-shadow: 0 5px 20px 0 hsla(0, 0%, 0%, var(--si-shadow-opacity));
+	cursor: pointer;
+	transition: all 0.25s ease;
+	&__img {
+		position: relative;
+		display: flex;
+		overflow: hidden;
+		align-items: center;
+		justify-content: center;
+		max-height: 250px;
+		border-radius: 20px;
+		transition: all 0.25s ease;
+		img {
+			display: block;
+			width: 100%;
+			border-radius: 20px;
+			transition: all 0.25s ease;
+		}
+	}
+	&__interactions {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 5px 10px;
+	}
+	&__title {
+		padding-top: 10px;
+		padding-bottom: 5px;
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin: 0;
+			padding: 0;
+			font-size: 1.1rem;
+		}
+	}
+	&__text {
+		padding: 0 15px 15px;
+		font-size: 0.85rem;
+		p {
+			margin: 0;
+			font-size: inherit;
+			opacity: 0.8;
+		}
+	}
+}

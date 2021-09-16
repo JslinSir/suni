@@ -1,0 +1,18 @@
+@import 'base';
+@import 'variant';
+@import 'icon';
+@import 'loading';
+
+.si-checkbox {
+	&.disabled {
+		pointer-events: none;
+		.si-checkbox__label {
+			opacity: 0.5;
+		}
+		.si-checkbox__effect {
+			opacity: 0.6;
+			background: transparent;
+			box-shadow: none;
+		}
+	}
+}

@@ -1,0 +1,22 @@
+.si-radio {
+	&__effect {
+		&__icon {
+			transition: all 0.25s ease;
+			i {
+				font-size: 0.75rem;
+			}
+		}
+	}
+	&:hover {
+		.si-radio__effect__icon {
+			opacity: 0.7;
+		}
+	}
+	&.checked {
+		.si-radio__effect__icon {
+			opacity: 0;
+			transition: all 0.25s ease;
+			transform: scale(1.3);
+		}
+	}
+}

@@ -1,0 +1,41 @@
+.si-switch {
+	&--icon {
+		.si-switch__circle {
+			background: transparent;
+			box-shadow: none;
+			i {
+				opacity: 1;
+				font-size: 1.3rem;
+			}
+		}
+		&.checked {
+			.si-switch__circle {
+				color: white;
+			}
+		}
+	}
+
+	&--indeterminate {
+		.si-switch__input {
+			pointer-events: none;
+		}
+		.si-switch__circle {
+			left: 50%;
+			transform: translate(-50%);
+		}
+		&:active.checked {
+			.si-switch__circle {
+				left: calc(100% - 24px);
+			}
+		}
+	}
+	&--square {
+		border-radius: 5px;
+		.si-switch__background {
+			border-radius: 5px;
+		}
+		.si-switch__circle {
+			border-radius: 5px;
+		}
+	}
+}

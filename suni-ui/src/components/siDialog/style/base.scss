@@ -1,0 +1,74 @@
+.si-dialog {
+	position: relative;
+	display: inline-block;
+	min-width: 400px;
+	max-width: 100%;
+	margin: 0 auto;
+	margin-top: 15vh;
+	color: hsl(var(--si-text));
+	border-radius: var(--si-radius);
+	background: hsl(var(--si-background));
+	box-shadow: 0 5px 30px 0 rgba(0, 0, 0, var(--si-shadow-opacity));
+	transition: all 0.25s ease;
+
+	&__header {
+		padding: 20px 20px 10px;
+		text-align: center;
+		line-height: 1.5;
+	}
+	&__content {
+		position: relative;
+		padding: 30px;
+	}
+	&__footer {
+		text-align: center;
+		padding: 10px 20px 20px;
+	}
+	&__close {
+		position: absolute;
+		z-index: 200;
+		top: -6px;
+		right: -6px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		border-radius: 12px;
+		background: inherit;
+		box-shadow: 0 5px 20px 0 rgba(0, 0, 0, var(--si-shadow-opacity));
+		transition: all 0.25s ease;
+
+		--si-color: var(--si-text);
+		i {
+			width: 34px;
+			height: 34px;
+			opacity: 0.7;
+			&:after {
+				width: 14px;
+			}
+			&:before {
+				width: 14px;
+			}
+		}
+		&:hover {
+			box-shadow: 0 0 4px 0 rgba(0, 0, 0, var(--si-shadow-opacity));
+			transform: translate(-2px, 2px);
+			i {
+				opacity: 1;
+			}
+		}
+	}
+
+	&.header {
+		.si-dialog__content {
+			padding-top: 20px;
+		}
+	}
+	&.footer {
+		.si-dialog__content {
+			padding-bottom: 20px;
+		}
+	}
+}

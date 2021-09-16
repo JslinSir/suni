@@ -1,0 +1,14 @@
+@import 'root';
+@import 'base';
+@import 'loading';
+@import 'icon';
+
+.si-radio {
+	&.disabled {
+		opacity: 0.5;
+		pointer-events: none;
+		.si-radio__effect {
+			background: hsl(var(--si-gray-3));
+		}
+	}
+}

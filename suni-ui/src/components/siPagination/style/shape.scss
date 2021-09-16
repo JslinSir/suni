@@ -1,0 +1,30 @@
+.si-pagination {
+	&.circle {
+		.si-pagination__pager {
+			.number {
+				border-radius: 50%;
+			}
+			.si-pagination__active {
+				border-radius: 50%;
+			}
+		}
+		.si-pagination__prev,
+		.si-pagination__next {
+			border-radius: 50%;
+		}
+	}
+	&.square {
+		.si-pagination__pager {
+			.number {
+				border-radius: 0;
+			}
+			.si-pagination__active {
+				border-radius: 0;
+			}
+		}
+		.si-pagination__prev,
+		.si-pagination__next {
+			border-radius: 0;
+		}
+	}
+}

@@ -1,0 +1,58 @@
+.si-button {
+	&--size-xlarge,
+	&--size-xl {
+		border-radius: 20px;
+		.si-button__content {
+			padding: 15px 20px;
+			font-size: 20px;
+		}
+		&.icon {
+			.si-button__content {
+				padding: 15px 15px;
+			}
+		}
+	}
+
+	&--size-large,
+	&--size-lg {
+		font-size: 18px;
+		border-radius: 15px;
+		.si-button__content {
+			padding: 10px 15px;
+		}
+		&.icon {
+			.si-button__content {
+				padding: 10px 10px;
+			}
+		}
+	}
+
+	&--size-small,
+	&--size-sm {
+		font-size: 13px;
+		border-radius: 9px;
+		.si-button__content {
+			padding: 5px 10px;
+		}
+		&.icon {
+			.si-button__content {
+				padding: 5px 5px;
+			}
+		}
+	}
+
+	&--size-mini,
+	&--size-xsmall,
+	&--size-xs {
+		font-size: 12px;
+		border-radius: 7px;
+		.si-button__content {
+			padding: 3px 8px;
+		}
+		&.icon {
+			.si-button__content {
+				padding: 3px 3px;
+			}
+		}
+	}
+}

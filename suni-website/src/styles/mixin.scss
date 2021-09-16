@@ -1,0 +1,13 @@
+@mixin scrollBar {
+	&::-webkit-scrollbar-track-piece {
+		background: hsl(0, 0%, 100%);
+	}
+	&::-webkit-scrollbar {
+		width: 0.35em;
+		height: 0.35em;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: var(--scrollbar-color);
+		border-radius: 0.1em;
+	}
+}

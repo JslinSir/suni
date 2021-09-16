@@ -1,0 +1,9 @@
+@import 'base';
+@import 'shape';
+
+.si-pagination {
+	&.disabled {
+		opacity: 0.6;
+		pointer-events: none;
+	}
+}

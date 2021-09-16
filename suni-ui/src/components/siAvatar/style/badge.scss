@@ -1,0 +1,41 @@
+.si-avatar {
+	&__badge {
+		position: absolute;
+
+		--badge-w: -4px;
+
+		&__point {
+			width: 13px;
+			height: 13px;
+			color: hsl(var(--si-background));
+			border: 2px solid hsl(var(--si-background));
+			border-radius: 50%;
+			background: hsl(var(--si-color));
+		}
+		&__slot {
+			color: hsl(var(--si-background));
+			border: 2px solid hsl(var(--si-background));
+			border-radius: 8px;
+			background: hsl(var(--si-color));
+			font-size: 12px;
+			padding: 0 3px;
+		}
+
+		&--top-right {
+			top: var(--badge-w);
+			right: var(--badge-w);
+		}
+		&--top-left {
+			top: var(--badge-w);
+			left: var(--badge-w);
+		}
+		&--bottom-right {
+			bottom: var(--badge-w);
+			right: var(--badge-w);
+		}
+		&--bottom-left {
+			bottom: var(--badge-w);
+			left: var(--badge-w);
+		}
+	}
+}

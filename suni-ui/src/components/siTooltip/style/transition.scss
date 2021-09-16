@@ -1,0 +1,20 @@
+.si-tooltip-enter-active,
+.si-tooltip-leave-active {
+	transition: all 0.25s ease;
+}
+.si-tooltip-enter-from,
+.si-tooltip-leave-to {
+	opacity: 0;
+	&.top {
+		transform: translate(-50%, 5px);
+	}
+	&.bottom {
+		transform: translate(-50%, -5px);
+	}
+	&.left {
+		transform: translate(5px, -50%);
+	}
+	&.right {
+		transform: translate(-5px, -50%);
+	}
+}

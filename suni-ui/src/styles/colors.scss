@@ -1,0 +1,36 @@
+:root {
+	--si-primary: 223, 100%, 55%;
+	--si-success: 115, 57%, 51%;
+	--si-warning: 44, 100%, 50%;
+	--si-danger: 355, 100%, 64%;
+	--si-dark: 0, 0%, 12%;
+	--si-light: 195, 33%, 80%;
+	--si-color: 220, 8%, 7%;
+
+	// theme
+	--si-background: 0, 0%, 100%;
+	--si-text: 210, 29%, 24%;
+	--si-gray-1: 195, 50%, 98%;
+	--si-gray-2: 195, 22%, 96%;
+	--si-gray-3: 195, 15%, 95%;
+	--si-gray-4: 195, 9%, 91%;
+}
+
+[class*='si-'][class*='--primary'] {
+	--si-color: var(--si-primary);
+}
+[class*='si-'][class*='--success'] {
+	--si-color: var(--si-success);
+}
+[class*='si-'][class*='--warning'] {
+	--si-color: var(--si-warning);
+}
+[class*='si-'][class*='--danger'] {
+	--si-color: var(--si-danger);
+}
+[class*='si-'][class*='--dark'] {
+	--si-color: var(--si-dark);
+}
+[class*='si-'][class*='--light'] {
+	--si-color: var(--si-light);
+}

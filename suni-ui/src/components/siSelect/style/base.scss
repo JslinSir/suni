@@ -1,0 +1,106 @@
+.si-select {
+	position: relative;
+	display: inline-block;
+	width: 200px;
+	border-radius: 12px;
+	cursor: pointer;
+	transition: all 0.25s ease;
+	&__input {
+		width: 100%;
+		padding: 7px 13px;
+		color: hsl(var(--si-text));
+		border: 2px solid transparent;
+		border-radius: inherit;
+		background: hsl(var(--si-gray-2));
+		cursor: inherit;
+		transition: all 0.25s ease;
+		&::placeholder {
+			color: hsla(var(--si-text), var(--si-placeholder-opacity));
+		}
+	}
+
+	&__suffix {
+		position: absolute;
+		top: calc(50% - 4.9px);
+		right: 15px;
+		transition: all 0.25s ease;
+	}
+
+	&:hover {
+		.si-select__input {
+			background: hsl(var(--si-background));
+			box-shadow: 0 5px 25px -4px hsla(0, 0%, 0%, var(--si-shadow-opacity));
+			transform: translate(0, -4px);
+		}
+		.si-select__suffix {
+			transform: translate(0, -4px);
+		}
+	}
+
+	&__input:focus {
+		background: hsl(var(--si-background));
+		box-shadow: 0 5px 25px -4px hsla(0, 0%, 0%, var(--si-shadow-opacity));
+		transform: translate(0, -4px);
+
+		& ~ .si-select__suffix {
+			transform: translate(0, -4px);
+		}
+	}
+
+	&.active {
+		.si-select__input {
+			background: hsl(var(--si-background));
+			transform: translate(0, -4px);
+		}
+		.si-select__suffix {
+			transform: translate(0, -4px);
+		}
+		&.bottom {
+			box-shadow: 0 5px 25px -4px hsla(0, 0%, 0%, var(--si-shadow-opacity));
+			border-radius: 12px 12px 0 0;
+		}
+		&.top {
+			box-shadow: 0 -5px 25px -4px hsla(0, 0%, 0%, var(--si-shadow-opacity));
+			border-radius: 0 0 12px 12px;
+		}
+	}
+
+	& + & {
+		margin-left: 0.5em;
+	}
+}
+.si-options {
+	position: absolute;
+	z-index: var(--si-zindex-select);
+	overflow: auto;
+	max-height: 200px;
+	padding: 5px;
+	background: hsl(var(--si-background));
+
+	&__no-data {
+		margin: 2px 0;
+		padding: 6px 10px;
+		color: hsla(var(--si-text), var(--si-placeholder-opacity));
+	}
+
+	&.bottom {
+		border-radius: 0 0 12px 12px;
+		box-shadow: 0 10px 20px -5px hsl(0, 0%, 0%, var(--si-shadow-opacity));
+	}
+	&.top {
+		border-radius: 12px 12px 0 0;
+		box-shadow: 0 -10px 20px -5px hsl(0, 0%, 0%, var(--si-shadow-opacity));
+	}
+
+	&::-webkit-scrollbar {
+		display: block;
+		width: 5px;
+		height: 5px;
+		background: transparent;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 5px;
+		background: hsl(var(--si-gray-3));
+		transition: opacity 0.2s;
+	}
+}

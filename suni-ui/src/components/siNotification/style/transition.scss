@@ -1,0 +1,23 @@
+.si-notification-enter-from {
+	max-height: 0;
+	padding: 0 20px;
+	margin: 0 10px;
+	.si-notification__content {
+		opacity: 0;
+	}
+}
+.si-notification-enter-active {
+	transition: all 0.25s ease, transform 0.3s ease 0.1s, clip-path 0.5s ease 0.1s;
+}
+.si-notification-leave-active {
+	transition: all 0.25s ease;
+}
+.si-notification-leave-to {
+	max-height: 0 !important;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	opacity: 0 !important;
+	box-shadow: 0 0 0 0 hsla(0, 0%, 0%, 0);
+}

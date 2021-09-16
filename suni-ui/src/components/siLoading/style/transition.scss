@@ -1,0 +1,8 @@
+.si-loading-enter-active,
+.si-loading-leave-active {
+	transition: opacity 0.5s;
+}
+.si-loading-enter-from,
+.si-loading-leave-to {
+	opacity: 0;
+}

@@ -1,0 +1,30 @@
+.si-checkbox {
+	&.lineThrough {
+		.si-checkbox__label {
+			position: relative;
+			display: inline-block;
+			&:before {
+				position: absolute;
+				top: 45%;
+				left: 50%;
+				right: 50%;
+				height: 2px;
+				background: hsla(var(--si-text), 0.6);
+				content: '';
+				transition: all 0.25s ease;
+			}
+		}
+	}
+
+	&.checked {
+		&.lineThrough {
+			.si-checkbox__label {
+				opacity: 0.4;
+				&:before {
+					left: 5%;
+					right: 5%;
+				}
+			}
+		}
+	}
+}

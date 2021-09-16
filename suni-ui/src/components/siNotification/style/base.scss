@@ -1,0 +1,55 @@
+.si-notification {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	max-width: 340px;
+	height: auto;
+	margin: 3px 0;
+	padding: 20px;
+	color: hsl(var(--si-text));
+	border-radius: 20px;
+	background: hsl(var(--si-background));
+	box-shadow: 0 5px 15px -5px hsla(0, 0%, 0%, var(--si-shadow-opacity));
+	cursor: pointer;
+	transition: all 0.3s ease;
+	clip-path: circle(145% at 100% 50%);
+	&__content {
+		transition: all 0.25s ease 0.2s;
+		&__header {
+			margin: 0;
+			margin-bottom: 6px;
+			padding: 0;
+			h4 {
+				margin: 0;
+				padding: 0;
+				font-size: 15px;
+			}
+		}
+		&__text {
+			width: 100%;
+			p {
+				margin: 0;
+				padding: 0;
+				font-size: 13px;
+				line-height: 1.3;
+				color: hsl(210, 33%, 36%);
+			}
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 2px;
+		right: 2px;
+		padding: 0;
+		border: 0;
+		background: transparent;
+		transform: scale(0.75);
+		--si-color: var(--si-text);
+	}
+
+	&:hover {
+		box-shadow: 0 0 1px 0 hsla(0, 0%, 0%, var(--si-shadow-opacity));
+		transform: translate(0, 3px);
+	}
+}

@@ -1,0 +1,28 @@
+.si-card {
+	&.type-3 {
+		display: flex;
+		max-width: 400px;
+
+		.si-card__img {
+			img {
+				min-width: 200px;
+			}
+		}
+		.si-card__text {
+			padding-top: 15px;
+		}
+		.si-card__title {
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				padding: 0;
+			}
+		}
+
+		&:hover {
+			transform: scale(1.04);
+		}
+	}
+}

@@ -1,0 +1,36 @@
+.si-button-group {
+	display: inline-block;
+	.si-button {
+		margin: 0px;
+	}
+	.si-button:not(:last-of-type):not(:first-of-type) {
+		border-radius: 0px;
+	}
+	.si-button:first-of-type {
+		border-radius: 12px 0px 0px 12px;
+	}
+	.si-button:last-of-type {
+		border-radius: 0px 12px 12px 0px;
+	}
+
+	.si-button--default {
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			transform: none;
+			box-shadow: none;
+			filter: grayscale(0.3);
+		}
+	}
+	.si-button--border:not(:last-of-type):not(:first-of-type) {
+		&:before {
+			border-left: 0px;
+		}
+	}
+	.si-button--border:nth-last-of-type(2) {
+		&:before {
+			border-right: 0px;
+		}
+	}
+}

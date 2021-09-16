@@ -1,0 +1,10 @@
+@import './root.scss';
+@import './base.scss';
+@import './transition.scss';
+@import './variant.scss';
+
+.si-loading {
+	&.target {
+		position: absolute;
+	}
+}

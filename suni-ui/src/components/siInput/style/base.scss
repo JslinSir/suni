@@ -1,0 +1,33 @@
+.si-input {
+	position: relative;
+	width: 200px;
+	border-radius: 12px;
+	display: inline-block;
+	.si-input__content {
+		width: 100%;
+		padding: 7px 13px;
+		padding-left: 10px;
+		color: hsl(var(--si-text));
+		border: 2px solid transparent;
+		border-radius: inherit;
+		background: hsl(var(--si-gray-2));
+		transition: all 0.25s ease;
+		&::placeholder {
+			color: hsla(var(--si-text), var(--si-placeholder-opacity));
+		}
+		&:focus {
+			padding-left: 15px;
+			background: hsl(var(--si-gray-3));
+		}
+	}
+
+	&.type {
+		.si-input__content:focus {
+			border-bottom: 2px solid hsl(var(--si-color));
+		}
+	}
+
+	& + & {
+		margin-left: 0.5em;
+	}
+}

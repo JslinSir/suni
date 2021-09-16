@@ -1,0 +1,32 @@
+.si-checkbox {
+	&__effect {
+		.si-checkbox__icon {
+			position: absolute;
+			z-index: 1;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			i {
+				font-size: 1.1em;
+				opacity: 0;
+				color: #ffffff;
+				transition: all 0.25s ease;
+				transform: scale(0.5);
+			}
+		}
+	}
+
+	&.checked {
+		.si-checkbox__icon {
+			i {
+				opacity: 1;
+				transition: all 0.25s ease 0.15s;
+				transform: scale(1);
+			}
+		}
+	}
+}

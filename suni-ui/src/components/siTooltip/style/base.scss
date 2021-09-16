@@ -1,0 +1,74 @@
+.si-tooltip-content {
+	display: inline-block;
+}
+
+.si-tooltip {
+	position: fixed;
+	z-index: var(--si-zindex-tooltip);
+	min-width: 30px;
+	max-width: 350px;
+	min-height: 30px;
+	padding: 10px;
+	font-size: 0.85rem;
+	color: hsl(var(--si-background));
+	border-radius: 12px;
+	background: hsl(var(--si-color));
+	text-align: center;
+
+	&.top,
+	&.bottom {
+		transform: translate(-50%, 0);
+		&:after {
+			position: absolute;
+			z-index: -2;
+			left: 50%;
+			width: 10px;
+			height: 10px;
+			background: inherit;
+			content: '';
+			transform: translate(-50%) rotate(45deg);
+		}
+	}
+	&.top {
+		&:after {
+			bottom: -3px;
+			border-radius: 0 0 2px 0;
+		}
+	}
+	&.bottom {
+		transform: translate(-50%, 0);
+		&:after {
+			top: -3px;
+			border-radius: 2px 0 0 0;
+		}
+	}
+
+	&.left,
+	&.right {
+		transform: translate(0, -50%);
+		&:after {
+			position: absolute;
+			z-index: -2;
+			top: 50%;
+			width: 10px;
+			height: 10px;
+			background: inherit;
+			content: '';
+			transform: translate(0, -50%) rotate(45deg);
+		}
+	}
+	&.left {
+		transform: translate(0, -50%);
+		&:after {
+			right: -3px;
+			border-radius: 0 2px 0 0;
+		}
+	}
+	&.right {
+		transform: translate(0, -50%);
+		&:after {
+			left: -3px;
+			border-radius: 0 0 0 2px;
+		}
+	}
+}

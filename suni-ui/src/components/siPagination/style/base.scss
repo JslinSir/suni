@@ -1,0 +1,127 @@
+.si-pagination {
+	position: relative;
+	display: inline-flex;
+	align-self: center;
+	justify-content: center;
+	white-space: nowrap;
+
+	.si-pagination__pager {
+		position: relative;
+		display: inline-flex;
+		.number {
+			width: 36px;
+			height: 36px;
+			margin: 0 2px;
+			padding: 0;
+			padding-top: 10.5px;
+			font-size: 14.4px;
+			color: hsl(var(--si-text));
+			border: 0;
+			border-radius: 12px;
+			background: hsl(var(--si-gray-3));
+			cursor: pointer;
+			transition: background 0.25s ease, transform 0.25s ease;
+
+			&:hover {
+				background: hsl(var(--si-gray-4));
+			}
+			&:active {
+				transform: scale(0.9);
+			}
+		}
+		.ellipsis {
+			width: 36px;
+			height: 36px;
+			margin: 0 2px;
+			padding: 0;
+			cursor: pointer;
+			position: relative;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+
+			&::before {
+				font-family: 'boxicons';
+				transition: opacity 0.25s ease;
+				content: '\ed15';
+				opacity: 1;
+				position: absolute;
+			}
+			&:hover::before {
+				opacity: 0;
+			}
+			&.next::after {
+				content: '\ea32';
+			}
+			&.prev::after {
+				content: '\ea31';
+			}
+			&::after {
+				font-family: 'boxicons';
+				transition: opacity 0.25s ease;
+				opacity: 0;
+				position: absolute;
+			}
+			&:hover::after {
+				opacity: 1;
+			}
+		}
+		.si-pagination__active {
+			position: absolute;
+			display: inline-block;
+			width: 36px;
+			height: 36px;
+			line-height: 36px;
+			padding: 0;
+			top: 0;
+			left: -40px;
+			border: 0;
+			border-radius: 12px;
+			background: hsla(var(--si-color));
+			color: hsl(var(--si-background));
+			transition: all 0.25s ease;
+			box-shadow: 0 5px 20px 0 hsla(var(--si-color), 0.3);
+
+			&.move {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	.si-pagination__prev,
+	.si-pagination__next {
+		display: inline-block;
+		width: 36px;
+		height: 36px;
+		line-height: 36px;
+		margin: 0 2px;
+		padding: 0;
+		border: 0;
+		border-radius: 12px;
+		background: hsl(var(--si-gray-3));
+		cursor: pointer;
+		transition: all 0.25s ease;
+		font-size: 24px;
+		&:hover {
+			background: hsl(var(--si-gray-4));
+		}
+		&:active {
+			transform: scale(0.9);
+		}
+		&.disabled {
+			opacity: 0.4;
+		}
+	}
+	.si-pagination__prev {
+		&::before {
+			font-family: 'boxicons';
+			content: '\ecb0';
+		}
+	}
+	.si-pagination__next {
+		&::before {
+			font-family: 'boxicons';
+			content: '\ecb3';
+		}
+	}
+}
