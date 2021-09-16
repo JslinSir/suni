@@ -83,10 +83,17 @@
       * vite配置环境
       *  函数配置`defineConfig(fn({mode}))`
       * ok
-  * [ ] 打包部署
+  * [x] 打包部署
     * suni-ui 更版本成功
-    * 
+    * gitee pages 部署成功
+    * github page 部署成功
+  * [ ] 开发打包自动化命令
+    * 开发自动化
+      * 自动 suni-ui watch 模式
+      * 自动 suni-website dev 模式
 * 优化文档网页
-  * [ ] 首页动态
-    * [ ] 标题的提示偏移
-    * [ ] 描述掀开效果
+
+  * 首页动态
+
+  * [x] 标题的提示偏移
+  * [ ] 描述掀开效果

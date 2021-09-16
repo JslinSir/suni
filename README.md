@@ -2,6 +2,11 @@
 
 > A Vue.js 3.0 UI Toolkit for Fun.
 
+Docs:
+* [gitee pages](http://yysuni.gitee.io/suni/)	
+* [github pages](https://yysuni.github.io/suni/)
+
+
 ## Install
 
 ```shell
