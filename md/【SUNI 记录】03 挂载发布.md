@@ -1,49 +1,50 @@
-* 打包 **website** 项目挂载至 github / gitee
-  * [x] 打包
-    * 报错 *TypeError: Cannot read properties of null (reading 'isCE')*
-    * 网上查不到解决办法
-    * 使用打包后的 suni-ui打包，没问题了
-  * [x] 查看gitee如何挂载
-    * 搜索gitee pages
-    * [帮助](https://gitee.com/help/articles/4136#article-header3)
-    * 已提交申请
-    * 申请成功
-  * [x] gitee.io 访问报错
-    *  *No 'Access-Control-Allow-Origin' header is present on the requested resource.*
-    * 开启强制https，报错404
-    * 配置Jekyll ❌
-    * gitee pages 设置部署目录为空，额，更不对了 ❌
-    * element-plus专门开了一个分支( gh-pages)放置网址 😂
-    * 效仿 element-plus专门开分支 ❌
-    * 问题在于，资源访问没有自动加前缀，而我的网址是有前置的
-    * 算了 直接配置同名pages :ok:
-    *  也推断出 Jekyll 配置文件没起作用，.spa是生效了
-       * .spa得放到部署根目录
-    * 配置了vite base
-      * 资源加载没问题，但是没有运行了？
-    * 继续查看vite官文，添加一个部署文件 deploy.sh ❌
-    * 看到配置base后，history模式就会出问题
-    * 所以配置createWebHistory('vue3-website')就 :ok: 了
-    * npm run serve 也没有问题
-  * [x] 挂载github pages
-    * 上传代码成了难题
-      * ssr 设置本地端口 7890，设置全局
-      * shell 设置 all_proxy
-      * 关掉ssr负载均衡
+打包 **website** 项目挂载至 github / gitee
+* [x] 打包
+  * 报错 *TypeError: Cannot read properties of null (reading 'isCE')*
+  * 网上查不到解决办法
+  * 使用打包后的 suni-ui打包，没问题了
+* [x] 查看gitee如何挂载
+  * 搜索gitee pages
+  * [帮助](https://gitee.com/help/articles/4136#article-header3)
+  * 已提交申请
+  * 申请成功
+* [x] gitee.io 访问报错
+  *  *No 'Access-Control-Allow-Origin' header is present on the requested resource.*
+  * 开启强制https，报错404
+  * 配置Jekyll ❌
+  * gitee pages 设置部署目录为空，额，更不对了 ❌
+  * element-plus专门开了一个分支( gh-pages)放置网址 😂
+  * 效仿 element-plus专门开分支 ❌
+  * 问题在于，资源访问没有自动加前缀，而我的网址是有前置的
+  * 算了 直接配置同名pages :ok:
+  *  也推断出 Jekyll 配置文件没起作用，.spa是生效了
+     * .spa得放到部署根目录
+  * 配置了vite base
+    * 资源加载没问题，但是没有运行了？
+  * 继续查看vite官文，添加一个部署文件 deploy.sh ❌
+  * 看到配置base后，history模式就会出问题
+  * 所以配置createWebHistory('vue3-website')就 :ok: 了
+  * npm run serve 也没有问题
+* [x] 挂载github pages
+  * 上传代码成了难题
+    * ssr 设置本地端口 7890，设置全局
+    * shell 设置 all_proxy
+    * 关掉ssr负载均衡
+    * ok
+  * github pages默认只支持/docs文件夹部署
+    * 那就直接换输出目录
+    * 又出现报错Error: Cannot find module 'debug'
+      * 删除node_modules
+      * 没用
+      * 直接安装 npm install debug -D
       * ok
-    * github pages默认只支持/docs文件夹部署
-      * 那就直接换输出目录
-      * 又出现报错Error: Cannot find module 'debug'
-        * 删除node_modules
-        * 没用
-        * 直接安装 npm install debug -D
-        * ok
-      * 支持单文件
-        * 从404.html下手
-        * 添加404.html重定向
-        * 不行
-        * 别人element-plus都用hash 我倔强什么，改了
-        * ok
+    * 支持单文件
+      * 从404.html下手
+      * 添加404.html重定向
+      * 不行
+      * 别人element-plus都用hash 我倔强什么，改了
+      * ok
+
 * 打包 **SUNI** 发布至 npm
   * [x] 打包是否分生产和开发模式（mini..），先不区分
   * [x] 理清发布情况
@@ -107,11 +108,28 @@
       * 报错*vscode-languageserver-protocol*，我什么时候安装的这个？
       * 删了
       * 又报其它*vscode*错误，直接删除node_modules
+    * 更改bin文件夹名为scripts
   * 更新readme
   * 添加MIT
+  * 删除master分支
 * 优化文档网页
 
   * 首页动态
 
   * [x] 标题的提示偏移
+
   * [ ] 描述掀开效果
+
+  * [x] 编辑器报错：
+  	Cannot find type definition file for 'node'.
+      The file is in the program because:
+        Entry point of type library 'node' specified in compilerOptions
+    * npm install @types/node --save-dev
+    * reload window
+    * 仔细一看，是因为我写了types node，而我没有安装
+      * 我确实在vite.config.ts 中使用了path模块
+
+**对外发布**
+
+* 掘金
+
