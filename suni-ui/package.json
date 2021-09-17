@@ -16,15 +16,13 @@
 	"peerDependencies": {
 		"vue": "^3.2.2"
 	},
-	"dependencies": {
-		"color": "^4.0.1"
-	},
 	"devDependencies": {
 		"@rollup/plugin-commonjs": "^20.0.0",
 		"@rollup/plugin-node-resolve": "^13.0.4",
 		"@types/color": "^3.0.2",
 		"@vue/compiler-sfc": "^3.2.2",
 		"chalk": "^4.1.2",
+		"color": "^4.0.1",
 		"esbuild": "^0.12.21",
 		"postcss": "^8.3.6",
 		"rollup": "^2.56.2",

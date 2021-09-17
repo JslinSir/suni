@@ -169,8 +169,10 @@
 * website整理
 
   * 移除依赖markdown-it-anchor
-  * 将依赖vite-plugin-vuedoc 移植开发依赖
+  * 将依赖vite-plugin-vuedoc 移至开发依赖
   * 安装highlight.js，引入scss
   * 配置 vite.config emptyOutDir: false
     * 不清空目录，因为没有运行权限？
 
+* suni-ui 似乎就不应该存在 依赖，只应该有开发依赖？
+  * color移至开发依赖
