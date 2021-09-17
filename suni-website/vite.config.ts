@@ -6,7 +6,8 @@ import vitePluginVuedoc, { vueDocFiles } from 'vite-plugin-vuedoc'
 const baseConfig = {
 	base: '/suni/',
 	build: {
-		outDir: '../docs'
+		outDir: '../docs',
+		emptyOutDir: false
 	},
 
 	plugins: [

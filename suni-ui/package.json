@@ -10,7 +10,7 @@
 		"types"
 	],
 	"scripts": {
-		"build": "tsc --project ./tsconfig.json && rollup -c",
+		"build": "rollup -c",
 		"watch": "rollup -c -w"
 	},
 	"peerDependencies": {

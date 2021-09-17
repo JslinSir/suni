@@ -139,7 +139,7 @@
 
 **日常bug**
 
-* [ ] 引入没有type
+* [x] 引入没有type
   * 查看type resolve规则
 
   * 设置tscofig
@@ -150,16 +150,27 @@
    ```
 
   * tsc输出type
-    * 报错：无法解析vue
-    * 换成vue-tsc
+    * [ ] 报错：无法解析vue
+    * [ ] 换成vue-tsc
     * 报错：'emit mode is not yet support'
-      * 就是不能输出
-    * 那不用vue-tsc，不编译vue
-    * 设置 tsc --project ./tsconfig.ts
-    * ok
+      * [ ] 就是不能输出
+    * [ ] 那不用vue-tsc，不编译vue
+    * [ ] 设置 tsc --project ./tsconfig.ts
+    * [ ] ok
   * 输出跟想的不一样
-    * 查看element-plus
-    * 找不到
+    * [ ] 查看element-plus
+    * [ ] 找不到
   * 自己写
-    * 
-* [ ] readme在suni-ui文件夹也需要一份
+    * [ ] 简单写了
+  * [ ] 待细写全局方法
+
+* [x] readme在suni-ui文件夹也需要一份
+
+* website整理
+
+  * 移除依赖markdown-it-anchor
+  * 将依赖vite-plugin-vuedoc 移植开发依赖
+  * 安装highlight.js，引入scss
+  * 配置 vite.config emptyOutDir: false
+    * 不清空目录，因为没有运行权限？
+

@@ -8,7 +8,7 @@ import ComponentExample from '@/components/ComponentExample.vue'
 import 'normalize.css/normalize.css'
 import 'boxicons/css/boxicons.css'
 import 'suni-ui/lib/suni-ui.css'
-import 'vite-plugin-vuedoc/node_modules/highlight.js/scss/atom-one-light.scss'
+import 'highlight.js/scss/atom-one-light.scss'
 import './styles/index.scss'
 
 const app = createApp(App)
