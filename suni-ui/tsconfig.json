@@ -1,9 +1,11 @@
 {
 	"compilerOptions": {
 		"sourceMap": true,
-		"declaration": true,
 		"strict": true,
-		"outDir": "./dist",
+		"declaration": true,
+		"declarationDir": "./types",
+		"emitDeclarationOnly": true,
+		"sourceRoot": "./src/index.ts",
 		"baseUrl": ".",
 		"rootDir": ".",
 		"target": "es6",

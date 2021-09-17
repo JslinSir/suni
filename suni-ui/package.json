@@ -3,13 +3,14 @@
 	"version": "1.0.4",
 	"description": "Base on Vuesax,  A Nice-looking Component Library for Vue3.0",
 	"main": "./lib/suni-ui.js",
+	"types": "./types/index.d.ts",
 	"files": [
 		"lib",
 		"src",
 		"types"
 	],
 	"scripts": {
-		"build": "rollup -c",
+		"build": "tsc --project ./tsconfig.json && rollup -c",
 		"watch": "rollup -c -w"
 	},
 	"peerDependencies": {

@@ -12,11 +12,5 @@ const install = (app: App) => {
 	})
 }
 
-declare module '@vue/runtime-core' {
-	interface ComponentCustomProperties {
-		$loading: any
-		$notify: any
-	}
-}
 
 export default { install }
