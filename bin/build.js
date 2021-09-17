@@ -1,7 +1,7 @@
 const chalk = require('chalk')
 const { execSync } = require('child_process')
 
-console.log(`[${chalk.bold.black('SUNI BUILD')}]`)
+console.log(`[${chalk.bold.green('SUNI BUILD')}]`)
 console.log('[********************]')
 console.log()
 

@@ -2,7 +2,7 @@
 
 > A Vue.js 3.0 UI Toolkit for Fun.
 
-Docs:
+## Documentation:
 * [gitee pages](http://yysuni.gitee.io/suni/)	
 * [github pages](https://yysuni.github.io/suni/)
 
@@ -39,3 +39,6 @@ npm install
 npm run install
 npm run dev
 ```
+
+## Licence
+Element Plus is open source software licensed as MIT.

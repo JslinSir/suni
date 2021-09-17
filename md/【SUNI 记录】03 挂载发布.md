@@ -103,7 +103,12 @@
       * 文字提示
       * 文字颜色 *npm i chalk -D*
     * 安装自动化
+      * 安装suni `npm i`的时候自动触发了 `npm run install`package-lock.json多了一个*hasInstallScript*
+      * 报错*vscode-languageserver-protocol*，我什么时候安装的这个？
+      * 删了
+      * 又报其它*vscode*错误，直接删除node_modules
   * 更新readme
+  * 添加MIT
 * 优化文档网页
 
   * 首页动态
