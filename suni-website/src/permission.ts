@@ -5,6 +5,7 @@ router.beforeEach(async (to, from, next) => {
 	const redirect = searchParams.get('redirect')
 
 	if (redirect) {
+		console.log('[suni redirect]', redirect)
 		next(redirect)
 	} else next()
 })
