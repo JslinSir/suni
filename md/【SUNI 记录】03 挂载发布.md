@@ -179,5 +179,5 @@
   
 * 紧急bug，目录导航用了 `#`定位，与 router 的hash模式冲突
 
-  * 暂时解决 gitee pages
+  * [x] 暂时解决 gitee pages
     * 因为能够支持history 模式
