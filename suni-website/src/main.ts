@@ -11,6 +11,8 @@ import 'suni-ui/lib/suni-ui.css'
 import 'highlight.js/scss/atom-one-light.scss'
 import './styles/index.scss'
 
+import './permission'
+
 const app = createApp(App)
 
 app.use(router)
