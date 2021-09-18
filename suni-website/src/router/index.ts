@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Layout from '@/views/layout.vue'
 import { reactive } from 'vue'
 
@@ -120,7 +120,7 @@ const routes: RouteRecordRaw[] = [
 ]
 
 const router = createRouter({
-	history: createWebHashHistory(),
+	history: createWebHistory('suni'),
 	routes
 })
 
