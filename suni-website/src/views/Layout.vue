@@ -2,7 +2,7 @@
 	<div id="layout">
 		<header>
 			<div class="header-inner">
-				<div class="logo">
+				<div class="logo" @click="$router.push('/')">
 					<span>SUNI</span>
 				</div>
 				<ul class="nav">
@@ -40,6 +40,7 @@ header {
 		display: flex;
 	}
 	.logo {
+		cursor: pointer;
 		display: flex;
 		align-items: center;
 		font-weight: bold;

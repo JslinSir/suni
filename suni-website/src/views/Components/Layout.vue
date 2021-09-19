@@ -36,15 +36,15 @@
 			</nav>
 		</section>
 		<section class="components-content" ref="content">
-			<div class="components-content__entry">
+			<div class="components-content__entry" ref="entry">
 				<router-view ref="component"></router-view>
 			</div>
 
 			<div class="components-content__toc">
 				<h3>目录</h3>
 				<ul>
-					<li v-for="h2 in toc">
-						<a :href="`#${h2.anchor}`">{{ h2.content }}</a>
+					<li v-for="h2 in toc" @click="locate(h2.anchor)">
+						<a>{{ h2.content }}</a>
 					</li>
 				</ul>
 			</div>
@@ -93,6 +93,20 @@ export default defineComponent({
 				top: 0,
 				behavior: 'smooth'
 			})
+		},
+		locate(anchor) {
+			const h2 = (this.$refs.entry as HTMLElement).querySelector(`#${anchor}`) as HTMLElement
+
+			if (h2) {
+				document.documentElement.scrollTo({
+					top: h2.offsetTop - 68,
+					behavior: 'smooth'
+				})
+				setTimeout(() => {
+					h2.classList.add('active')
+					setTimeout(() => h2.classList.remove('active'), 250)
+				}, 800)
+			}
 		},
 		fullscreen() {
 			document.documentElement.style.setProperty('--header-height', '0px')
@@ -207,6 +221,7 @@ export default defineComponent({
 			}
 		}
 		a {
+			cursor: pointer;
 			display: inline-block;
 			color: hsl(220, 10%, 50%);
 			width: 100%;
