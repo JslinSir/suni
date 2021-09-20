@@ -88,6 +88,7 @@ export default defineComponent({
 			this.toTop()
 			this.$router.push(path)
 		},
+
 		toTop() {
 			document.documentElement.scrollTo({
 				top: 0,
@@ -108,6 +109,7 @@ export default defineComponent({
 				}, 800)
 			}
 		},
+
 		fullscreen() {
 			document.documentElement.style.setProperty('--header-height', '0px')
 			document.documentElement.style.setProperty('--aside-width', '0px')
